@@ -16,7 +16,7 @@ function App({ classes } = {}) {
   }, [setTalks, talks]);
 
   return (
-    <div className="App">
+    <div className={classes.app}>
       <header className={classes.header}>
         <div className={classes.logo}>
           <svg id="keyboard" viewBox="0 0 20 20" className={classes.logoSvg}>
@@ -56,7 +56,8 @@ export default withStyles({
     maxWidth: 1024,
     margin: "1rem auto",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    color: "white"
   },
   logo: {
     background: "#007ad1",
@@ -76,8 +77,9 @@ export default withStyles({
   row: {
     display: "flex",
     maxWidth: 1024,
-    alignItems: "space-between",
-    margin: "0 auto"
+    margin: "0 auto",
+    marginBottom: "1rem",
+    flexDirection: "column"
   },
   talk: {
     marginTop: "2rem",
@@ -86,7 +88,8 @@ export default withStyles({
   authors: {
     display: "flex",
     paddingBottom: "1rem",
-    alignItems: "center"
+    alignItems: "center",
+    color: "white"
   },
   author: {
     marginRight: "1rem",
@@ -99,6 +102,6 @@ export default withStyles({
   card: {
     flex: "1 1 auto",
     minWidth: 320,
-    minHeight: 270
+    minHeight: 150
   }
 })(App);
