@@ -6,7 +6,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { withStyles } from "@material-ui/core/styles";
 import { fetchTalks } from "./App.actions";
 
-function App({ classes }) {
+function App({ classes } = {}) {
   const [talks, setTalks] = useState((global.__STATE__ || {}).talks || []);
 
   useEffect(() => {
