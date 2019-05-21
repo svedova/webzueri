@@ -24,6 +24,7 @@ export default async (req, res) => {
   await actions.fetchTalks({
     setTalks: talks => {
       state.talks = talks;
+      throw new Error("Fetching talks failed");
     }
   });
 

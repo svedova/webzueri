@@ -18,8 +18,5 @@ export const fetchTalks = ({ setTalks }) => {
       const talks = res.data && res.data.data && res.data.data.talks;
       setTalks(talks);
       return talks;
-    })
-    .catch(e => {
-      console.error("Query error:", e);
     });
 };
